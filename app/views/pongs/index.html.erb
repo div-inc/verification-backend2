@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pongs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pongs.each do |pong| %>
+      <tr>
+        <td><%= link_to 'Show', pong %></td>
+        <td><%= link_to 'Edit', edit_pong_path(pong) %></td>
+        <td><%= link_to 'Destroy', pong, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pong', new_pong_path %>
